@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apakah Wagyu Ganteng?</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #0048BA, #cc00cc);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: #f0e68c;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #hoaxButton {
+            background-color: #FF0000;
+            color: white;
+        }
+        #gantengButton {
+            background-color: #0000FF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Apakah Wagyu Ganteng????</h1>
+        <img src="https://static.zerochan.net/Todoroki.Shouto.full.2903717.jpg" alt="Gambar Wagyu" id="wagyuImage">
+        <br>
+        <button id="hoaxButton" onclick="hoaxClick()">HOAX</button>
+        <button id="gantengButton" onclick="gantengClick()">GANTENG BGT</button>
+    </div>
+
+    <script>
+        let hoaxClickCount = 0;
+
+        function hoaxClick() {
+            hoaxClickCount++;
+            const hoaxButton = document.getElementById('hoaxButton');
+
+            if (hoaxClickCount > 3) {
+                alert("SEPERTINYA PILIHAN INI BUKANLAH PILIHAN YANG SEHARUSHNYA ANDA PILIH KARNA WAGYU GNTG BGTTT");
+                hoaxClickCount = 0; // reset count after showing message
+            } else {
+                // Move button to random position
+                const randomX = Math.floor(Math.random() * 300) - 150;
+                const randomY = Math.floor(Math.random() * 300) - 150;
+                hoaxButton.style.position = "relative";
+                hoaxButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            }
+        }
+
+        function gantengClick() {
+            alert("WAHHHH BENER BANGETTTTTTT 100 BWAT KMU");
+        }
+    </script>
+</body>
+</html>
